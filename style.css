@@ -15,7 +15,7 @@ issues:
   --pink: #f1485f;
   --font-color: #faf6fa; /* only one font color on this page */
   --square-size: 60vw; /* used as unit for defining box size. can be redefined in each media query */
-  --grid-gap: 20px;
+  --grid-gap: 23px;
 }
 * {
   margin: 0 auto;
@@ -128,7 +128,7 @@ li {
   white-space: nowrap;
 }
 li:last-of-type {
-  padding: 13px 40px;
+  padding: 13px 40px; /* achieve button look*/
 }
 li:not(:first-of-type) {
   top: 40px;
@@ -136,6 +136,9 @@ li:not(:first-of-type) {
 h1 {
   width: 90%;
   line-height: 1.2em;
+}
+p {
+  line-height: 8px; /* to resemble template */
 }
 section {
   display: grid;
@@ -154,15 +157,15 @@ section.squares > * {
 section.squares > * > div {
   width: 100%;
   align-self: center;
-  top: -10px; /* since the absolute positioned h2 is taken out of this parent div, need to offset this 'center' cuz otherwise the icon is center aligned, together with the h2 below, it will look like the content is closer to the bottom */
+  top: -30px; /* since the absolute positioned h2 is taken out of this parent div, need to offset this 'center' cuz otherwise the icon is center aligned, together with the h2 below, it will look like the content is closer to the bottom */
   margin: 0;
   position: initial;
 }
 h2 {
   position: absolute; /* make sure the text underneath each icon are horizontally aligned */
-  top: calc(var(--square-size) / 1.44);
-  left: 5%;
-  width: 90%; /* makes sure text is center aligned */
+  top: calc(var(--square-size) / 1.5);
+  left: 7%;
+  width: 86%; /* makes sure text is center aligned */
   line-height: 20px;
 }
 img {
@@ -172,7 +175,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   :root {
-    --square-size: 23vw;
+    --square-size: 24vw;
   }
   .hide-on-mobile {
     display: none;
