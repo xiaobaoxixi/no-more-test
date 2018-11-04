@@ -20,4 +20,4 @@
 - to be added
 
 ## OBS.
-- both contributor acounts on this repo are mine. 
+- both contributor acounts on this repo are mine. It seems that VS Code sometimes ignores my git setting and switches between my acounts by itself...
