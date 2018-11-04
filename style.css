@@ -124,8 +124,14 @@ section.squares > * > div {
   align-self: center;
   margin: 0;
 }
+h2 {
+  position: absolute;
+}
 img {
-  width: 35%;
+  height: calc(
+    var(--square-size) / 4
+  ); /* set height to make sure the text underneath each icon are horizontally aligned */
+  width: auto;
   margin-bottom: 10%;
 }
 @media screen and (min-width: 760px) {
