@@ -1,0 +1,137 @@
+/******************
+issues:
+- the pink horizontal line between the text is not positioned precisely as in the image. Not sure what design guideline is followed here 
+*******************/
+
+/* presets starts */
+:root {
+  /*  color variables might not be necessary fot this simple page, but those look like recurring colors for a site so set them here */
+  --purple: #393a55;
+  --green: #82a2a3;
+  --pink: #eb7778;
+  --font-color: #faf6fa; /* only one font color on this page */
+  --square-size: 60vw; /* used as unit for defining box size. can be redefined in each media query */
+  --grid-gap: 20px;
+}
+* {
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: var(--font-color);
+}
+.bg-purple {
+  background-color: var(--purple);
+}
+.bg-green {
+  background-color: var(--green);
+}
+.bg-pink {
+  background-color: var(--pink);
+}
+.fix-left {
+  position: absolute;
+  left: 0;
+  margin-left: 0;
+}
+.hori-line {
+  /* for the case of using div as a horizontal line. there is only one such case on this page but could be more on other pages */
+  height: 3px;
+  width: 15ch;
+}
+.weight-regular *, /* if most text inside their parent element has the same font weight, define font weight on the parent to spare tying in html. The * is needed to overwrite UA default settings */
+.weight-regular {
+  font-weight: 400;
+}
+.weight-medium *,
+.weight-medium {
+  font-weight: 600;
+}
+.weight-bold *,
+.weight-bold {
+  font-weight: 700;
+}
+.size-small *,
+.size-small {
+  font-size: 16px;
+}
+.size-medium *,
+.size-medium {
+  font-size: 20px;
+}
+.size-large *,
+.size-large {
+  font-size: 32px;
+}
+
+/* presets end */
+
+/* element styling starts */
+body {
+  background-image: url(img/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px 4vw; /* don't know which design guide is followed here, settings based on image */
+}
+main {
+  width: 100%;
+}
+nav {
+  display: flex;
+}
+ul {
+  width: 100%;
+  text-align: right;
+}
+li {
+  display: inline;
+  line-height: 2em;
+  margin-left: 25px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+li:last-of-type {
+  padding: 13px 40px;
+}
+h1 {
+  width: 90%;
+  line-height: 1.2em;
+}
+section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: var(--grid-gap);
+}
+section.heading {
+  padding: 7vw;
+}
+section.squares > * {
+  height: var(--square-size);
+  width: var(--square-size);
+  display: flex;
+  padding: 20px;
+}
+section.squares > * > div {
+  width: 100%;
+  align-self: center;
+  margin: 0;
+}
+img {
+  width: 35%;
+  margin-bottom: 10%;
+}
+@media screen and (min-width: 760px) {
+  :root {
+    --square-size: 23vw;
+  }
+  h1 {
+    width: 22ch;
+  }
+  section.squares {
+    grid-template-columns: repeat(3, var(--square-size));
+    width: calc(3 * var(--square-size) + 2 * var(--grid-gap));
+  }
+}
