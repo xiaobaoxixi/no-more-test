@@ -100,14 +100,14 @@ nav {
 }
 ul {
   width: 100%;
-  height: 30px;
+  height: 40px;
   overflow: hidden;
   text-align: right;
   list-style: none;
 }
 ul.expand {
   height: auto;
-  overflow: initial;
+  overflow: visible;
   background-color: rgba(
     255,
     255,
@@ -140,7 +140,7 @@ section {
   grid-gap: var(--grid-gap);
 }
 section.heading {
-  padding: 60px 7vw 14vw 7vw; /* the bottom part is a temp solution. use vw as unit to maintain sizing relationship to the bg image, which is set to have 100vw width. 14 is used to to make room for the bridge in the bg image so that the squares won't cover them. not ideal for super wide screen */
+  padding: 50px 7vw 14vw 7vw; /* the bottom part is a temp solution. use vw as unit to maintain sizing relationship to the bg image, which is set to have 100vw width. 14 is used to to make room for the bridge in the bg image so that the squares won't cover them. not ideal for super wide screen */
 }
 section.squares > * {
   height: var(--square-size);
@@ -175,10 +175,19 @@ img {
   body {
     background-size: 100% auto;
   }
+  ul,
+  ul.expand {
+    height: 40px;
+    overflow: visible;
+    background-color: transparent;
+  }
   li {
     display: inline;
     line-height: 2em;
     margin-left: 25px;
+  }
+  li:not(:first-of-type) {
+    top: 0;
   }
   h1 {
     width: 22ch;
