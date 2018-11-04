@@ -1,6 +1,8 @@
 /******************
 issues:
 - the pink horizontal line between the text is not positioned precisely as in the image. Not sure what design guideline is followed here 
+- not sure if Opan Sans is the correct font
+- no design guideline to follow for mobile 
 *******************/
 
 /* presets starts */
@@ -40,7 +42,7 @@ issues:
 .hori-line {
   /* for the case of using div as a horizontal line. there is only one such case on this page but could be more on other pages */
   height: 3px;
-  width: 15ch;
+  width: 13ch;
 }
 .weight-regular *, /* if most text inside their parent element has the same font weight, define font weight on the parent to spare tying in html. The * is needed to overwrite UA default settings */
 .weight-regular {
@@ -60,7 +62,7 @@ issues:
 }
 .size-medium *,
 .size-medium {
-  font-size: 20px;
+  font-size: 19px;
 }
 .size-large *,
 .size-large {
@@ -70,9 +72,12 @@ issues:
 /* presets end */
 
 /* element styling starts */
+html {
+  height: 100%;
+}
 body {
   background-image: url(img/bg.jpg);
-  background-size: contain;
+  background-size: 100% auto;
   background-repeat: no-repeat;
   padding: 40px 4vw; /* don't know which design guide is followed here, settings based on image */
 }
@@ -106,8 +111,7 @@ section {
   grid-gap: var(--grid-gap);
 }
 section.heading {
-  padding: 7vw;
-  margin-bottom: 5vw; /* temp solution. use vw as unit to maintain sizing relationship to the bg image, which is set to cover 100vw width. 5 is used to to make room for the bridge in the bg image so that the squares won't cover them. not precice */
+  padding: 60px 7vw 13vw 7vw; /* the bottom part is a temp solution. use vw as unit to maintain sizing relationship to the bg image, which is set to have 100vw width. 5 is used to to make room for the bridge in the bg image so that the squares won't cover them. not ideal for super wide screen */
 }
 section.squares > * {
   height: var(--square-size);
