@@ -13,7 +13,7 @@
 <body>
     <nav>
         <ul class="weight-medium size-medium">
-            <li class="fix-left">no-more</li>
+            <li class="fix-left"><span class="hide-on-mobile" id="burger">&#9776;</span>no-more</li>
             <li>Pricing</li>
             <li>Resources</li>
             <li>Blog</li>
@@ -48,6 +48,15 @@
             </div>
         </section>
     </main>
+    <script>
+        "use strict";
+        const burger =
+            document.querySelector('#burger').parentElement; // allow click on li to trigger dropdown. not restricted to burger itself
+        const nav = document.querySelector('ul');
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('expand')
+        })
+    </script>
 </body>
 
 </html>
