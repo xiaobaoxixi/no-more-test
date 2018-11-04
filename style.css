@@ -111,7 +111,7 @@ section {
   grid-gap: var(--grid-gap);
 }
 section.heading {
-  padding: 60px 7vw 13vw 7vw; /* the bottom part is a temp solution. use vw as unit to maintain sizing relationship to the bg image, which is set to have 100vw width. 5 is used to to make room for the bridge in the bg image so that the squares won't cover them. not ideal for super wide screen */
+  padding: 60px 7vw 14vw 7vw; /* the bottom part is a temp solution. use vw as unit to maintain sizing relationship to the bg image, which is set to have 100vw width. 14 is used to to make room for the bridge in the bg image so that the squares won't cover them. not ideal for super wide screen */
 }
 section.squares > * {
   height: var(--square-size);
