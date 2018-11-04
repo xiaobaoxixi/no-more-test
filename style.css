@@ -152,18 +152,17 @@ section.squares > * {
   height: var(--square-size);
   width: var(--square-size);
   display: flex;
-  padding: 20px;
+  padding: 0 20px;
 }
 section.squares > * > div {
   width: 100%;
   align-self: center;
-  top: -30px; /* since the absolute positioned h2 is taken out of this parent div, need to offset this 'center' cuz otherwise the icon is center aligned, together with the following h2, it will look like the content is closer to the bottom */
   margin: 0;
   position: initial;
 }
 h2 {
   position: absolute; /* make sure the text underneath each icon are horizontally aligned */
-  top: calc(var(--square-size) / 1.5);
+  top: calc(var(--square-size) / 1.6);
   left: 7%;
   width: 86%; /* makes sure text is center aligned */
   line-height: 20px;
@@ -204,5 +203,8 @@ img {
   section.squares {
     grid-template-columns: repeat(3, var(--square-size));
     width: calc(3 * var(--square-size) + 2 * var(--grid-gap));
+  }
+  h2 {
+    top: calc(var(--square-size) / 1.55);
   }
 }
