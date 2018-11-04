@@ -142,7 +142,7 @@ h2 {
 }
 img {
   height: calc(
-    var(--square-size) / 5
+    var(--square-size) / 4
   ); /* set height instead of width and together with h2's position absolute to make sure the text underneath each icon are horizontally aligned */
   width: auto;
   margin-bottom: 10%;
