@@ -3,7 +3,7 @@ issues:
 - the pink horizontal line between the text is not positioned precisely as in the image. Not sure what design guideline is followed here 
 - not sure if Opan Sans is the correct font
 - no design guideline to follow for mobile 
-- color codes are grabed from pdf, don't seem to be accurate 
+- color codes are grabbed from pdf, don't seem to be accurate 
 *******************/
 
 /* presets starts */
@@ -41,7 +41,7 @@ issues:
   margin-left: 0;
 }
 .hori-line {
-  /* for the case of using div as a horizontal line. there is only one such case on this page but could be more on other pages */
+  /* for the case of using a div as a horizontal line. there is only one such case on this page but could be more on other pages. use div cuz it's easier to animate if needed */
   height: 3px;
   width: 13ch;
 }
@@ -73,7 +73,8 @@ issues:
 /* presets end */
 
 html {
-  height: 100%;
+  height: 100%; /* if set to 100%, bg image size will be smaller (see background size setting below, 100% in height = 100 vh )*/
+  /* height: auto; /* is set to auto, bg image will fill up whole page, but zoomed in so much that only a very small portion of the image is visible on mobile, might not be ideal */
 }
 body {
   background-image: url(img/bg.jpg);
@@ -146,17 +147,18 @@ section.squares > * {
   height: var(--square-size);
   width: var(--square-size);
   display: flex;
-  padding: 20px;
+  padding: 30px;
 }
 section.squares > * > div {
   width: 100%;
   align-self: center;
-  top: -20px; /* since the absolute positioned h2 is taken out of this parent div, need to offset this 'center' cuz otherwise the icon is center aligned, together with the h2 below, it will look like the content is closer to the bottom */
+  top: -25px; /* since the absolute positioned h2 is taken out of this parent div, need to offset this 'center' cuz otherwise the icon is center aligned, together with the h2 below, it will look like the content is closer to the bottom */
   margin: 0;
 }
 h2 {
   position: absolute; /* make sure the text underneath each icon are horizontally aligned */
   width: 100%; /* makes sure text is center aligned */
+  line-height: 18px;
 }
 img {
   height: calc(
@@ -167,7 +169,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   :root {
-    --square-size: 22vw;
+    --square-size: 23vw;
   }
   .hide-on-mobile {
     display: none;
