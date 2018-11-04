@@ -3,14 +3,15 @@ issues:
 - the pink horizontal line between the text is not positioned precisely as in the image. Not sure what design guideline is followed here 
 - not sure if Opan Sans is the correct font
 - no design guideline to follow for mobile 
+- color codes are grabed from pdf, don't seem to be accurate 
 *******************/
 
 /* presets starts */
 :root {
   /*  color variables might not be necessary fot this simple page, but those look like recurring colors for a site so set them here */
-  --purple: #393a55;
-  --green: #82a2a3;
-  --pink: #eb7778;
+  --purple: #463d63;
+  --green: #619799;
+  --pink: #f1485f;
   --font-color: #faf6fa; /* only one font color on this page */
   --square-size: 60vw; /* used as unit for defining box size. can be redefined in each media query */
   --grid-gap: 20px;
@@ -79,7 +80,18 @@ body {
   background-image: url(img/bg.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
-  padding: 40px 4vw; /* don't know which design guide is followed here, settings based on image */
+  padding: 40px 4vw; /* don't know what design guide is followed here, settings based on image */
+}
+body::before {
+  /* the purple tone covering the bg image */
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--purple);
+  opacity: 0.3;
+  left: 0;
+  top: 0;
 }
 main {
   width: 100%;
