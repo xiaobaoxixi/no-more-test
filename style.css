@@ -4,7 +4,7 @@ issues:
 - not sure if Opan Sans is the correct font
 - no design guideline to follow for mobile 
 - no design guideline for background image
-- the pink horizontal line between the text is not positioned precisely as in the image. Not sure what design guideline is followed here 
+- the pink horizontal line between the text is not positioned precisely as in the image. Not sure what design rule is followed here 
 *******************/
 
 /* presets starts */
@@ -128,7 +128,7 @@ li {
   white-space: nowrap;
 }
 li:last-of-type {
-  padding: 13px 40px; /* achieve button look*/
+  padding: 13px 40px; /* achieve button look */
 }
 li:not(:first-of-type) {
   top: 40px;
@@ -146,7 +146,7 @@ section {
   grid-gap: var(--grid-gap);
 }
 section.heading {
-  padding: 50px 7vw 16vw 7vw; /* the bottom part is a temp solution. use vw as unit to maintain sizing relationship to the bg image, which is set to have 100vw width. 16 is used to to make room for the bridge in the bg image so that the squares won't cover them. not ideal for super wide screen */
+  padding: 50px 7vw 16vw 7vw; /* the bottom setting is a temp solution. use vw as unit to maintain sizing relationship to the bg image, which is set to have 100vw width. 16 is used to to make room for the bridge in the bg image so that the squares most likely won't cover them. not ideal for super wide screen */
 }
 section.squares > * {
   height: var(--square-size);
@@ -157,7 +157,7 @@ section.squares > * {
 section.squares > * > div {
   width: 100%;
   align-self: center;
-  top: -30px; /* since the absolute positioned h2 is taken out of this parent div, need to offset this 'center' cuz otherwise the icon is center aligned, together with the h2 below, it will look like the content is closer to the bottom */
+  top: -30px; /* since the absolute positioned h2 is taken out of this parent div, need to offset this 'center' cuz otherwise the icon is center aligned, together with the following h2, it will look like the content is closer to the bottom */
   margin: 0;
   position: initial;
 }
