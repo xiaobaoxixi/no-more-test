@@ -18,3 +18,6 @@
 
 ## solution 2:
 - to be added
+
+## OBS.
+- both contributor acounts on this repo are mine. 
