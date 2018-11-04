@@ -64,7 +64,7 @@ issues:
 }
 .size-large *,
 .size-large {
-  font-size: 32px;
+  font-size: 43px;
 }
 
 /* presets end */
@@ -72,7 +72,7 @@ issues:
 /* element styling starts */
 body {
   background-image: url(img/bg.jpg);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   padding: 40px 4vw; /* don't know which design guide is followed here, settings based on image */
 }
@@ -107,6 +107,7 @@ section {
 }
 section.heading {
   padding: 7vw;
+  margin-bottom: 5vw; /* temp solution. use vw as unit to maintain sizing relationship to the bg image, which is set to cover 100vw width. 5 is used to to make room for the bridge in the bg image so that the squares won't cover them. not precice */
 }
 section.squares > * {
   height: var(--square-size);
@@ -125,7 +126,7 @@ img {
 }
 @media screen and (min-width: 760px) {
   :root {
-    --square-size: 23vw;
+    --square-size: 22vw;
   }
   h1 {
     width: 22ch;
