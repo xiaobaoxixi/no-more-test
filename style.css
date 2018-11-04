@@ -50,7 +50,7 @@ a:visited {
 .hori-line {
   /* for the case of using a div as a horizontal line. there is only one such case on this page but could be more on other pages. use div cuz it's easier to animate if needed */
   height: 3px;
-  width: 13ch;
+  width: 13.5ch;
 }
 .weight-regular *, /* if most text inside their parent element has the same font weight, define font weight on the parent to spare tying in html. The * is needed to overwrite UA default settings */
 .weight-regular {
@@ -66,7 +66,7 @@ a:visited {
 }
 .size-small *,
 .size-small {
-  font-size: 16px;
+  font-size: 18px;
 }
 .size-medium *,
 .size-medium {
@@ -143,31 +143,32 @@ section {
   grid-gap: var(--grid-gap);
 }
 section.heading {
-  padding: 50px 7vw 14vw 7vw; /* the bottom part is a temp solution. use vw as unit to maintain sizing relationship to the bg image, which is set to have 100vw width. 14 is used to to make room for the bridge in the bg image so that the squares won't cover them. not ideal for super wide screen */
+  padding: 50px 7vw 16vw 7vw; /* the bottom part is a temp solution. use vw as unit to maintain sizing relationship to the bg image, which is set to have 100vw width. 16 is used to to make room for the bridge in the bg image so that the squares won't cover them. not ideal for super wide screen */
 }
 section.squares > * {
   height: var(--square-size);
   width: var(--square-size);
   display: flex;
-  padding: 30px;
+  padding: 20px;
 }
 section.squares > * > div {
   width: 100%;
   align-self: center;
-  top: -25px; /* since the absolute positioned h2 is taken out of this parent div, need to offset this 'center' cuz otherwise the icon is center aligned, together with the h2 below, it will look like the content is closer to the bottom */
+  top: -10px; /* since the absolute positioned h2 is taken out of this parent div, need to offset this 'center' cuz otherwise the icon is center aligned, together with the h2 below, it will look like the content is closer to the bottom */
   margin: 0;
+  position: initial;
 }
 h2 {
   position: absolute; /* make sure the text underneath each icon are horizontally aligned */
-  width: 100%; /* makes sure text is center aligned */
-  line-height: 18px;
+  top: calc(var(--square-size) / 1.44);
+  left: 5%;
+  width: 90%; /* makes sure text is center aligned */
+  line-height: 20px;
 }
 img {
-  height: calc(
-    var(--square-size) / 4
-  ); /* set height instead of width and together with h2's position absolute to make sure the text underneath each icon are horizontally aligned */
-  width: auto;
-  margin-bottom: 10%;
+  width: calc(var(--square-size) / 3);
+  height: auto;
+  margin-bottom: 17%;
 }
 @media screen and (min-width: 768px) {
   :root {
