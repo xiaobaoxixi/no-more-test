@@ -72,7 +72,6 @@ issues:
 
 /* presets end */
 
-/* element styling starts */
 html {
   height: 100%;
 }
@@ -134,15 +133,17 @@ section.squares > * {
 section.squares > * > div {
   width: 100%;
   align-self: center;
+  top: -20px; /* since the absolute positioned h2 is taken out of this parent div, need to offset this 'center' cuz otherwise the icon is center aligned, together with the h2 below, it will look like the content is closer to the bottom */
   margin: 0;
 }
 h2 {
-  position: absolute;
+  position: absolute; /* make sure the text underneath each icon are horizontally aligned */
+  width: 100%; /* makes sure text is center aligned */
 }
 img {
   height: calc(
-    var(--square-size) / 4
-  ); /* set height to make sure the text underneath each icon are horizontally aligned */
+    var(--square-size) / 5
+  ); /* set height instead of width and together with h2's position absolute to make sure the text underneath each icon are horizontally aligned */
   width: auto;
   margin-bottom: 10%;
 }
