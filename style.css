@@ -41,6 +41,12 @@ issues:
   left: 0;
   margin-left: 0;
 }
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+}
 .hori-line {
   /* for the case of using a div as a horizontal line. there is only one such case on this page but could be more on other pages. use div cuz it's easier to animate if needed */
   height: 3px;
@@ -120,7 +126,6 @@ ul.expand {
 li {
   line-height: 40px;
   white-space: nowrap;
-  cursor: pointer;
 }
 li:last-of-type {
   padding: 13px 40px;
