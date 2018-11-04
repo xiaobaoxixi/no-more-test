@@ -1,9 +1,10 @@
 /******************
 issues:
-- the pink horizontal line between the text is not positioned precisely as in the image. Not sure what design guideline is followed here 
+- color codes are grabbed from pdf, don't seem to be accurate 
 - not sure if Opan Sans is the correct font
 - no design guideline to follow for mobile 
-- color codes are grabbed from pdf, don't seem to be accurate 
+- no design guideline for background image
+- the pink horizontal line between the text is not positioned precisely as in the image. Not sure what design guideline is followed here 
 *******************/
 
 /* presets starts */
@@ -72,12 +73,8 @@ issues:
 
 /* presets end */
 
-html {
-  height: 100%; /* if set to 100%, bg image size will be smaller (see background size setting below, 100% in height = 100 vh )*/
-  /* height: auto; /* is set to auto, bg image will fill up whole page, but zoomed in so much that only a very small portion of the image is visible on mobile, might not be ideal */
-}
 body {
-  background-image: url(img/bg.jpg);
+  background-image: url(img/bg-mobile.jpg);
   background-size: auto 100%;
   background-repeat: no-repeat;
   padding: 40px 4vw; /* don't know what design guide is followed here, settings based on image */
@@ -175,6 +172,7 @@ img {
     display: none;
   }
   body {
+    background-image: url(img/bg.jpg);
     background-size: 100% auto;
   }
   ul,
